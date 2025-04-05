@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- title -->
+    <title>Nisargh Sojurn - Book Your Taxi</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.gif" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all-fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery.timepicker.min.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="loader-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- preloader end -->
+
+    <!-- header area -->
+    <header class="header">
+      <div class="main-navigation">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container position-relative">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/img/logo/logo.gif" alt="logo" />
+            </a>
+            <div class="mobile-menu-right">
+              <div class="search-btn">
+                <button type="button" class="nav-right-link">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#main_nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-mobile-icon"
+                  ><i class="fa fa-bars"></i
+                ></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="main_nav">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#" data-bs-toggle="dropdown"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="aboutus.html">About</a>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+              <div class="nav-right">
+                <div
+                  class="nav-right-btn mt-2"
+                  onclick="document.getElementById('bookingPopup').style.display='block'"
+                  class="open-modal-btn"
+                >
+                  <a href="#" class="theme-btn"
+                    ><span class="fas fa-taxi"></span>Book A Taxi</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- header area end -->
+
+    <main class="main">
+      <!-- contact area -->
+      <div class="contact-area py-5">
+        <div class="container">
+          <div class="contact-content">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="contact-info">
+                  <div class="contact-info-icon">
+                    <i class="fa fa-map-location-dot"></i>
+                  </div>
+                  <div class="contact-info-content">
+                    <h5>Address</h5>
+                    <p>Kasara, Maharashtra, India</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="contact-info">
+                  <div class="contact-info-icon">
+                    <i class="fa fa-phone-volume"></i>
+                  </div>
+                  <div class="contact-info-content">
+                    <h5>Call Us</h5>
+                    <p>+91 9022045332</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="contact-info">
+                  <div class="contact-info-icon">
+                    <i class="fa fa-envelope-square"></i>
+                  </div>
+                  <div class="contact-info-content">
+                    <h5>Email Us</h5>
+                    <p>
+                      <a href="" class="__cf_email__"
+                        >nisarghsojourn@gmail.com</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="contact-info">
+                  <div class="contact-info-icon">
+                    <i class="fa fa-clock"></i>
+                  </div>
+                  <div class="contact-info-content">
+                    <h5>Open Time</h5>
+                    <p>Mon - Sun (24/7)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-wrapper">
+            <div class="row">
+              <div class="col-lg-6 align-self-center">
+                <div class="contact-img">
+                  <img src="assets/img/contact/01.jpg" alt="" />
+                </div>
+              </div>
+              <div class="col-lg-6 align-self-center">
+                <div class="contact-form">
+                  <div class="contact-form-header">
+                    <h2>Get In Touch</h2>
+                    <p>
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page randomised
+                      words slightly when looking at its layout.
+                    </p>
+                  </div>
+                  <form method="post" id="contactForm" onsubmit="validateAndSubmitContact(event)">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="name"
+                            placeholder="Your Name"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            class="form-control"
+                            name="email"
+                            placeholder="Your Email"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="subject"
+                        placeholder="Your Subject"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <textarea
+                        name="message"
+                        cols="30"
+                        rows="5"
+                        class="form-control"
+                        placeholder="Write Your Message"
+                        required
+                      ></textarea>
+                    </div>
+                    <button type="submit" class="theme-btn">
+                      Send Message <i class="far fa-paper-plane"></i>
+                    </button>
+                    <div class="col-md-12 mt-3">
+                      <div id="contactFormMessage" class="form-messege text-success"></div>
+                    </div>
+                  </form>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end contact area -->
+
+      <!-- map -->
+      <div class="contact-map">
+        <iframe
+          src=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9657.531699071509!2d73.47309038001646!3d19.64850876602898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDM4JzU0LjYiTiA3M8KwMjgnMjMuMSJF!5e0!3m2!1sen!2sin!4v1619410634508!5m2!1sen!2sin"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </main>
+
+    <!-- footer area -->
+    <footer class="footer-area">
+      <div class="footer-widget">
+        <div class="container">
+          <div class="row footer-widget-wrapper pt-120 pb-70">
+            <div class="col-md-6 col-lg-4">
+              <div class="footer-widget-box about-us">
+                <a href="#" class="footer-logo">
+                  <img src="assets/img/logo/logo-light.gif" alt="" />
+                </a>
+                <p class="mb-3">
+                  We are many variations of passages available but the majority
+                  have suffered alteration in some form by injected humour words
+                  believable.
+                </p>
+                <ul class="footer-contact">
+                  <li>
+                    <a href="tel:+21236547898"
+                      ><i class="fa fa-phone"></i>+91 9022045332</a
+                    >
+                  </li>
+                  <li>
+                    <i class="fa fa-map-marker-alt"></i>Taxi stand, Kasara
+                  </li>
+                  <li>
+                    <a
+                      href="/cdn-cgi/l/email-protection#c3aaada5ac83a6bba2aeb3afa6eda0acae"
+                      ><i class="fa fa-envelope"></i
+                      ><span class="__cf_email__"
+                        >nisarghsojourn@gmail.com</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-2">
+              <div class="footer-widget-box list">
+                <h4 class="footer-widget-title">Quick Links</h4>
+                <ul class="footer-list">
+                  <li>
+                    <a href="#"><i class="fas fa-caret-right"></i>Home</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fas fa-caret-right"></i> About Us</a>
+                  </li>
+                  <!-- <li>
+                      <a href="#"
+                        ><i class="fas fa-caret-right"></i> </a
+                      >
+                    </li> -->
+                  <li>
+                    <a href="#"><i class="fas fa-caret-right"></i>Contact</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fas fa-caret-right"></i> Privacy policy</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="footer-widget-box list">
+                <h4 class="footer-widget-title">Support Center</h4>
+                <ul class="footer-list">
+                  <li>
+                    <a href="#"><i class="fas fa-caret-right"></i> FAQ's</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fas fa-caret-right"></i> Testimonials</a
+                    >
+                  </li>
+
+                  <li>
+                    <a href="#"
+                      ><i class="fas fa-caret-right"></i> Book A Ride</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fas fa-caret-right"></i> Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="footer-widget-box list">
+                <h4 class="footer-widget-title">Book Now</h4>
+                <div class="footer-newsletter">
+                  <ul class="footer-contact">
+                    <li>
+                      <a href="tel:+21236547898"
+                        ><i class="fa fa-phone"></i>+91 9022045332</a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        href="/cdn-cgi/l/email-protection#c3aaada5ac83a6bba2aeb3afa6eda0acae"
+                        ><i class="fa fa-envelope"></i
+                        ><span class="__cf_email__"
+                          >nisarghsojourn@gmail.com</span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                  <div class="subscribe-form">
+                    <button
+                      class="theme-btn"
+                      type="submit"
+                      onclick="document.getElementById('bookingPopup').style.display='block'"
+                      class="open-modal-btn"
+                    >
+                      Book your taxi now <i class="fa fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 align-self-center">
+              <p class="copyright-text">
+                &copy; Copyright <span id="date"></span>
+                <a href="#"> Taxica </a> All Rights Reserved.
+              </p>
+            </div>
+            <div class="col-md-6 align-self-center">
+              <ul class="footer-social">
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer area end -->
+
+    <!-- scroll-top -->
+    <a href="#" id="scroll-top"><i class="fa fa-arrow-up"></i></a>
+    <!-- scroll-top end -->
+
+    <!-- js -->
+    <script>
+      function validateAndSubmitContact(event) {
+        event.preventDefault();
+        const form = document.getElementById("contactForm");
+    
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return false;
+        }
+    
+        const formData = new FormData(form);
+    
+        // Optional: Convert to object and log
+        const formDataObject = {};
+        formData.forEach((value, key) => {
+          formDataObject[key] = value;
+        });
+        console.log("Contact Form Data Submitted: ", formDataObject);
+    
+        // Submit to Formspree
+        fetch("https://formspree.io/f/mpwapqle?no_redirect=true", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+          },
+          body: formData,
+        })
+          .then((response) => {
+            if (response.ok) {
+              document.getElementById("contactFormMessage").innerHTML =
+                '<p style="color: green;">Message sent successfully!</p>';
+              form.reset(); // Clear the form
+            } else {
+              return response.json().then((data) => {
+                if (data.errors) {
+                  throw new Error(
+                    data.errors.map((error) => error.message).join(", ")
+                  );
+                } else {
+                  throw new Error("Something went wrong. Please try again.");
+                }
+              });
+            }
+          })
+          .catch((error) => {
+            document.getElementById("contactFormMessage").innerHTML = 
+              `<p style="color: red;">${error.message}</p>`;
+          });
+      }
+    </script>
+    
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/jquery.appear.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/counter-up.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/jquery.timepicker.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
